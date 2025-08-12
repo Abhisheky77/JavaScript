@@ -70,10 +70,10 @@ console.log(m); // => [ 100, 500 ] ---> yaha per index 1 se start ho ga aur inde
 
 // Splice se hum add bhi kar sakte ha
 let a11 = ["GRREN","YELLOW"];
-console.log(" orginal:",a);
+console.log(" orginal:",a); // => orginal: [ 'GRREN', 'YELLOW' ]
 
 a.splice(1,0,"Red","White");
-console.log(a11);
+console.log(a11); // => [ 'GRREN', 'Red', 'White', 'YELLOW' ]
 
 
 //slice(startIndex, endIndex)
