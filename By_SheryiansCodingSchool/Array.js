@@ -59,6 +59,10 @@ console.log(m); // => [ 100, 200, 300, 400, 500 ] ---> he will remove the 1200 f
 m.shift()
 console.log(m); // => [ 200, 300, 400, 500 ] ---> he will remove satating elements 100 in Array.
 
+// splice 👇
+
+// 👉 Kaam → Array me add/remove/replace karta hai aur original array ko change kar deta hai.
+// 👉 Starting index, kitne elements remove karne hain, aur optional new elements specify karte ho.
 // splice(startIndex, deleteCount, item1, item2...) --> 
 // 1. (startIndex means kahase elements delete start kar na ha yo index de do.) 
 // 2. (deleteCount means kaha tak elements detete kar na ha yo index de do)
@@ -68,14 +72,25 @@ console.log(m); // => [ 100, 200, 300, 400, 500 ]
 m.splice(1,3);
 console.log(m); // => [ 100, 500 ] ---> yaha per index 1 se start ho ga aur index 3 elements delete ho jaya ga [ Delete elements :- 200,300,400]
 
-// Splice se hum add bhi kar sakte ha
-let a11 = ["GRREN","YELLOW"];
-console.log(" orginal:",a); // => orginal: [ 'GRREN', 'YELLOW' ]
 
-a.splice(1,0,"Red","White");
-console.log(a11); // => [ 'GRREN', 'Red', 'White', 'YELLOW' ]
+let colors = ["red", "green", "blue", "yellow"];
+
+// 1️. Remove elements
+let removed = colors.splice(1, 2); 
+console.log("After Remove:", colors); // ["red", "yellow"]
+console.log("Removed Elements:", removed); // ["green", "blue"]
+
+// 2️. Add elements (without removing anything)
+colors.splice(1, 0, "black", "white"); 
+console.log("After Add:", colors); // ["red", "black", "white", "yellow"]
+
+// 3️. Replace elements
+colors.splice(2, 1, "pink"); 
+console.log("After Replace:", colors); // ["red", "black", "pink", "yellow"]
 
 
+// slice 
+// Kaam → Array ka part copy karta hai, lekin original array ko change nahi karta.
 //slice(startIndex, endIndex)
 // slice matlab main array me se ex naya array bana leta ha jaha se me se bana chahu [startIndex mean ya se element start ho ga naya array ka liya] 
 // [endIndex mean ya tak element chahi ya ga naya array ka liya]
@@ -257,7 +272,7 @@ console.log(k1,k3,k5,k7,k9); // => 1 3 5 7 9
  */
 
  // new Array me kuch change karu ga to main array me kuch change nahi ho ga.
-let sp = [1,2,3,4,5,6,7,8,9,10] // main array
+let  sp = [1,2,3,4,5,6,7,8,9,10] // main array
 let opt = [...sp] // // new array, different reference
 console.log(opt); // => [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 opt.pop();
