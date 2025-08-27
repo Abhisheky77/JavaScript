@@ -145,7 +145,7 @@ Original array change nahi hota.
 // 👉 map srf tab youse karna hai jab aapko ek naya array banana hai pichhle array ke data ke basis par. 
 
 /**
- hum ko kan map use kae na ha --> jab bhi aapko aisa koi case dikh jaaye  jaha per ek array se naya array banega and
+ hum ko kab map use kar na ha --> jab bhi aapko aisa koi case dikh jaaye  jaha per ek array se naya array banega and
   wo naya array  kuchh values ko rakhega tab map lagega.
  */
 
